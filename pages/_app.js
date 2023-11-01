@@ -13,12 +13,12 @@ const App = ({ Component, pageProps }) => {
   return (
     <Fragment>
       <Head>
-        <title>Luique - Personal Portfolio React NextJS Template</title>
+        <title>Andika Bagaskara</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="author" content="bslthemes" />
+        <meta name="author" content="huntressofthefallen" />
         {/* Fonts */}
         <link
           rel="stylesheet"
@@ -82,8 +82,8 @@ const App = ({ Component, pageProps }) => {
           media="all"
         />
         {/* Favicon */}
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        {/* <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> */}
+        {/* <link rel="icon" href="favicon.ico" type="image/x-icon" /> */}
       </Head>
       {loader && <PreLoader />}
       <Component {...pageProps} />

@@ -15,12 +15,9 @@ const PortfolioIsotope = dynamic(
 );
 const Index = () => {
   return (
-    <Layout pageClassName={"home"}>
+    <Layout pageClassName={"home dark-skin"}>
       {/* Section - Hero Started */}
-      <section
-        className="lui-section lui-section-hero lui-gradient-top"
-        id="started-section"
-      >
+      <section className="lui-section lui-section-hero lui-gradient-top" id="started-section">
         <div className="container">
           {/* Hero Started */}
           <div className="lui-started v-line v-line-left">
@@ -53,7 +50,7 @@ const Index = () => {
                 <div className="description">
                   <div>
                     <p>
-                      From Jakarta, Indonesia. I have rich experience in consulting service on Marketing and Technology fields. I love to talk with you about our unique.
+                      From Jakarta, Indonesia. I bring extensive experience in marketing and technology consulting services. I'd be delighted to discuss our unique offerings with you.
                     </p>
                   </div>
                   <div className="social-links">
@@ -83,7 +80,7 @@ const Index = () => {
                 <img
                   decoding="async"
                   src="assets/images/profile2.png"
-                  alt="<b>Zoé</b> Miller"
+                  alt="<b>Andika</b> Bagaskara"
                 />
                 <span className="circle circle-1" />
                 <span
@@ -131,10 +128,7 @@ const Index = () => {
         </div>
       </section>
       {/* Section - Services */}
-      <section
-        className="lui-section lui-gradient-bottom"
-        id="services-section"
-      >
+      <section className="lui-section lui-gradient-bottom" id="services-section">
         {/* Heading */}
         <div className="lui-heading">
           <div className="container">
@@ -170,18 +164,15 @@ const Index = () => {
               <SwiperSlide className="swiper-slide">
                 <div className="services-item">
                   <div className="lui-subtitle">
-                    <span> Web Development </span>
+                    <span> Digital Marketing </span>
                   </div>
                   <div className="icon" />
                   <h5 className="lui-title">
-                    <span> Web Design &amp; Logo </span>
+                    <span> Strategic Online Promotion </span>
                   </h5>
                   <div className="lui-text">
                     <div>
-                      {" "}
-                      Web designers craft the overall vision &amp; plan for a
-                      website layout. Professional logo development: Business,
-                      Company, or Personal.{" "}
+                      {" "}Specializing in the development and execution of effective digital marketing strategies to enhance brand visibility and engagement.{" "}
                     </div>
                   </div>
                   <a href="#pricing-section" className="lnk">
@@ -199,18 +190,16 @@ const Index = () => {
               <SwiperSlide className="swiper-slide">
                 <div className="services-item">
                   <div className="lui-subtitle">
-                    <span> Apps Development </span>
+                    <span> Social Media Marketing </span>
                   </div>
                   <div className="icon" />
                   <h5 className="lui-title">
-                    <span> iOS &amp; Android </span>
+                    <span> Maximizing Social Presence </span>
                   </h5>
                   <div className="lui-text">
                     <div>
                       <p>
-                        Design Software applications to run on mobile devices.
-                        Modern and mobile-ready application that will help you
-                        reach all of your marketing.
+                        Expertise lies in optimizing social media presence, connecting with the target audience, and converting followers into loyal customers.
                       </p>
                     </div>
                   </div>
@@ -229,18 +218,15 @@ const Index = () => {
               <SwiperSlide className="swiper-slide">
                 <div className="services-item">
                   <div className="lui-subtitle">
-                    <span> Game Development </span>
+                    <span> Community Management </span>
                   </div>
                   <div className="icon" />
                   <h5 className="lui-title">
-                    <span> Unity &amp; Unreal Engine </span>
+                    <span> Engaging Digital Communities </span>
                   </h5>
                   <div className="lui-text">
                     <div>
-                      {" "}
-                      Creating games &amp; describes the design, development and
-                      release of a game. Developing unique mobile android and
-                      ios games.{" "}
+                      {" "}Proficient in the art of community management, fostering strong online communities to support brand objectives professionally.{" "}
                     </div>
                   </div>
                   <a href="#pricing-section" className="lnk">
@@ -258,18 +244,15 @@ const Index = () => {
               <SwiperSlide className="swiper-slide">
                 <div className="services-item">
                   <div className="lui-subtitle">
-                    <span> Advertising </span>
+                    <span> Web Development (NextJS, ReactJS, NodeJS) </span>
                   </div>
                   <div className="icon" />
                   <h5 className="lui-title">
-                    <span> Google Ads </span>
+                    <span> Modern Web Solutions </span>
                   </h5>
                   <div className="lui-text">
                     <div>
-                      {" "}
-                      Advertising services include: Google search result pages,
-                      gmails, YouTube and other websites participated in Google
-                      Ads program.{" "}
+                      {" "}Specializing in the development of high-performance websites and applications using NextJS, ReactJS, and NodeJS, ensuring a seamless user experience.{" "}
                     </div>
                   </div>
                   <a href="#pricing-section" className="lnk">
@@ -287,17 +270,16 @@ const Index = () => {
               <SwiperSlide className="swiper-slide">
                 <div className="services-item">
                   <div className="lui-subtitle">
-                    <span> Music Writing </span>
+                    <span> Chemical Engineering </span>
                   </div>
                   <div className="icon" />
                   <h5 className="lui-title">
-                    <span> Sound Track </span>
+                    <span> Innovative Chemical Solutions </span>
                   </h5>
                   <div className="lui-text">
                     <div>
                       <p>
-                        Music copying, writing, creating, transcription and
-                        composition services.
+                        Expertise in process optimization, product quality improvement, and innovation using principles of chemical engineering.
                       </p>
                     </div>
                   </div>
@@ -358,130 +340,12 @@ const Index = () => {
                     data-animate="active"
                   >
                     <h6 className="name">
-                      <span> PHP </span>
+                      <span> Digital Marketing </span>
                     </h6>
                     <div className="text">
                       <div>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="dots">
-                      <div className="dot" style={{ width: "85%" }}>
-                        <span />
-                      </div>
-                    </div>
-                    <div className="value">
-                      <span className="num">
-                        85 <span>%</span>
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Python </span>
-                    </h6>
-                    <div className="text">
-                      <div>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="dots">
-                      <div className="dot" style={{ width: "75%" }}>
-                        <span />
-                      </div>
-                    </div>
-                    <div className="value">
-                      <span className="num">
-                        75 <span>%</span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> JavaScript </span>
-                    </h6>
-                    <div className="text">
-                      <div>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="dots">
-                      <div className="dot" style={{ width: "75%" }}>
-                        <span />
-                      </div>
-                    </div>
-                    <div className="value">
-                      <span className="num">
-                        75 <span>%</span>
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> React </span>
-                    </h6>
-                    <div className="text">
-                      <div>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="dots">
-                      <div className="dot" style={{ width: "70%" }}>
-                        <span />
-                      </div>
-                    </div>
-                    <div className="value">
-                      <span className="num">
-                        70 <span>%</span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> WordPress </span>
-                    </h6>
-                    <div className="text">
-                      <div>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua.
+                          Skilled in creating and running successful online marketing campaigns that engage large audiences.
                         </p>
                       </div>
                     </div>
@@ -501,14 +365,12 @@ const Index = () => {
                     data-animate="active"
                   >
                     <h6 className="name">
-                      <span> Adobe XD </span>
+                      <span> JavaScript </span>
                     </h6>
                     <div className="text">
                       <div>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua.
+                          Well-versed in JavaScript, Node.js, React.js, and connecting various applications, with a track record in the tech and gaming industries.
                         </p>
                       </div>
                     </div>
@@ -525,6 +387,114 @@ const Index = () => {
                   </div>
                 </div>
               </div>
+              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div className="skills-items">
+                  <div
+                    className="skills-item scrolla-element-anim-1 scroll-animate"
+                    data-animate="active"
+                  >
+                    <h6 className="name">
+                      <span> Community Management </span>
+                    </h6>
+                    <div className="text">
+                      <div>
+                        <p>
+                          Experienced in building relationships between organizations, fostering collaborations, and improving community communication.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="dots">
+                      <div className="dot" style={{ width: "85%" }}>
+                        <span />
+                      </div>
+                    </div>
+                    <div className="value">
+                      <span className="num">
+                        85 <span>%</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="skills-item scrolla-element-anim-1 scroll-animate"
+                    data-animate="active"
+                  >
+                    <h6 className="name">
+                      <span> Project Management </span>
+                    </h6>
+                    <div className="text">
+                      <div>
+                        <p>
+                          Capable of managing projects effectively to achieve their goals.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="dots">
+                      <div className="dot" style={{ width: "80%" }}>
+                        <span />
+                      </div>
+                    </div>
+                    <div className="value">
+                      <span className="num">
+                        80 <span>%</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div className="skills-items">
+                  <div
+                    className="skills-item scrolla-element-anim-1 scroll-animate"
+                    data-animate="active"
+                  >
+                    <h6 className="name">
+                      <span> Customer Support </span>
+                    </h6>
+                    <div className="text">
+                      <div>
+                        <p>
+                          Proficient in providing excellent customer service and resolving issues effectively for customer satisfaction.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="dots">
+                      <div className="dot" style={{ width: "80%" }}>
+                        <span />
+                      </div>
+                    </div>
+                    <div className="value">
+                      <span className="num">
+                        80 <span>%</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="skills-item scrolla-element-anim-1 scroll-animate"
+                    data-animate="active"
+                  >
+                    <h6 className="name">
+                      <span> Chemical Engineering </span>
+                    </h6>
+                    <div className="text">
+                      <div>
+                        <p>
+                          Bringing a diverse skill set, including a background in chemical engineering, to drive innovation in various industries.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="dots">
+                      <div className="dot" style={{ width: "70%" }}>
+                        <span />
+                      </div>
+                    </div>
+                    <div className="value">
+                      <span className="num">
+                        70 <span>%</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="lui-bgtitle">
               <span> Skills </span>
@@ -534,9 +504,9 @@ const Index = () => {
       </section>
 
       {/* Section - Works */}
-      <section className="lui-section lui-gradient-top" id="works-section">
+      {/* <section className="lui-section lui-gradient-top" id="works-section"> */}
         {/* Heading */}
-        <div className="lui-heading">
+        {/* <div className="lui-heading">
           <div className="container">
             <div className="m-titles align-center">
               <h2
@@ -558,27 +528,24 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Works */}
-        <div className="v-line v-line-right">
+        {/* <div className="v-line v-line-right">
           <div className="container">
             <PortfolioIsotope />
             <div className="lui-bgtitle">
               <span> Portfolio </span>
             </div>
           </div>
-        </div>
-      </section>
+        </div> */}
+      {/* </section> */}
 
       {/* Section - Resume */}
       <Resume />
       {/* Section - Testimonials */}
-      <section
-        className="lui-section lui-gradient-center"
-        id="testimonials-section"
-      >
+      {/* <section className="lui-section lui-gradient-center" id="testimonials-section"> */}
         {/* Heading */}
-        <div className="lui-heading">
+        {/* <div className="lui-heading">
           <div className="container">
             <div className="m-titles align-center">
               <h2
@@ -600,9 +567,9 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Testimonials */}
-        <div className="v-line v-line-right">
+        {/* <div className="v-line v-line-right">
           <div className="container">
             <Swiper
               {...testimonialsSliderProps}
@@ -865,10 +832,10 @@ const Index = () => {
               <span> Reviews </span>
             </div>
           </div>
-        </div>
-      </section>
+        </div> */}
+      {/* </section> */}
       {/* Section - Pricing */}
-      <section className="lui-section lui-gradient-center" id="pricing-section">
+      <section className="lui-section lui-gradient-bottom" id="pricing-section">
         {/* Heading */}
         <div className="lui-heading">
           <div className="container">
@@ -903,22 +870,20 @@ const Index = () => {
                   data-animate="active"
                 >
                   <div className="lui-subtitle">
-                    <span> Hourley Basis </span>
+                    <span> Hourly Basis </span>
                   </div>
                   <div className="icon" />
                   <div className="price">
                     <span>
                       {" "}
-                      39 <b>$</b>
+                      25 <b>$</b>
                     </span>
                     <em>Hour</em>
                   </div>
                   <div className="lui-text">
                     <div>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                        Unlock the potential of your business with compelling services that cover digital marketing, community management, and customer support. Our expert solutions empower your brand without breaking the bank. Let's work together to achieve your goals.
                       </p>
                     </div>
                   </div>
@@ -927,17 +892,21 @@ const Index = () => {
                       <ul>
                         <li>
                           <i className="fas fa-check" />
-                          Brand Design
+                          Digital Marketing
                         </li>
                         <li>
                           <i className="fas fa-check" />
-                          Web Development
+                          Community Management
                         </li>
                         <li>
-                          <em>Advertising</em>
+                          <i className="fas fa-check" />
+                          Customer Support
                         </li>
                         <li>
-                          <em>Photography</em>
+                          <em>Web Development</em>
+                        </li>
+                        <li>
+                          <em>Chemical Engineering</em>
                         </li>
                       </ul>
                     </div>
@@ -968,16 +937,15 @@ const Index = () => {
                   <div className="price">
                     <span>
                       {" "}
-                      259 <b>$</b>
+                      900 <b>$</b>
                     </span>
                     <em>Week</em>
+                    <em>(~22.5 <b>$</b> Hour)</em>
                   </div>
                   <div className="lui-text">
                     <div>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                        Supercharge your business with our comprehensive services that cover digital marketing, community management, customer support, and expert web development. We provide a one-stop solution for your brand's success. Let's collaborate to achieve your goals.
                       </p>
                     </div>
                   </div>
@@ -986,18 +954,22 @@ const Index = () => {
                       <ul>
                         <li>
                           <i className="fas fa-check" />
-                          Brand Design
+                          Digital Marketing
+                        </li>
+                        <li>
+                          <i className="fas fa-check" />
+                          Community Management
+                        </li>
+                        <li>
+                          <i className="fas fa-check" />
+                          Customer Support
                         </li>
                         <li>
                           <i className="fas fa-check" />
                           Web Development
                         </li>
                         <li>
-                          <i className="fas fa-check" />
-                          Advertising
-                        </li>
-                        <li>
-                          <em>Photography</em>
+                          <em>Chemical Engineering</em>
                         </li>
                       </ul>
                     </div>
@@ -1025,16 +997,15 @@ const Index = () => {
                   <div className="price">
                     <span>
                       {" "}
-                      1.249 <b>$</b>
+                      3200 <b>$</b>
                     </span>
                     <em>Month</em>
+                    <em>(~20 <b>$</b> Hour)</em>
                   </div>
                   <div className="lui-text">
                     <div>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                        Enhance your business with our holistic suite of services covering digital marketing, community management, customer support, web development, and even solutions in the realm of chemical engineering. Our diverse expertise is tailored to drive your brand's success. Let's collaborate to achieve your goals.
                       </p>
                     </div>
                   </div>
@@ -1043,7 +1014,15 @@ const Index = () => {
                       <ul>
                         <li>
                           <i className="fas fa-check" />
-                          Brand Design
+                          Digital Marketing
+                        </li>
+                        <li>
+                          <i className="fas fa-check" />
+                          Community Management
+                        </li>
+                        <li>
+                          <i className="fas fa-check" />
+                          Customer Support
                         </li>
                         <li>
                           <i className="fas fa-check" />
@@ -1051,11 +1030,7 @@ const Index = () => {
                         </li>
                         <li>
                           <i className="fas fa-check" />
-                          Advertising
-                        </li>
-                        <li>
-                          <i className="fas fa-check" />
-                          Photography
+                          Chemical Engineering
                         </li>
                       </ul>
                     </div>
@@ -1078,175 +1053,8 @@ const Index = () => {
           </div>
         </div>
       </section>
-      {/* Section - Blog */}
-      <section className="lui-section lui-gradient-top" id="blog-section">
-        {/* Heading */}
-        <div className="lui-heading">
-          <div className="container">
-            <div className="m-titles align-center">
-              <h2
-                className="m-title splitting-text-anim-1 scroll-animate"
-                data-splitting="words"
-                data-animate="active"
-              >
-                <span> Latest Blog </span>
-              </h2>
-              <div
-                className="m-subtitle splitting-text-anim-1 scroll-animate"
-                data-splitting="words"
-                data-animate="active"
-              >
-                <span>
-                  {" "}
-                  my <b>Articles and Advice</b>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Archive */}
-        <div className="v-line v-line-right">
-          <div className="container">
-            <div className="blog-items row">
-              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <div
-                  className="archive-item scrolla-element-anim-1 scroll-animate"
-                  data-animate="active"
-                >
-                  <div className="image">
-                    <Link legacyBehavior href="/blog-single">
-                      <a>
-                        <img
-                          decoding="async"
-                          src="assets/images/single7.jpg"
-                          alt="The Main Thing For The Designer"
-                        />
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="desc">
-                    <div className="category lui-subtitle">
-                      <span>October 31, 2022</span>
-                    </div>
-                    <h5 className="lui-title">
-                      <Link legacyBehavior href="/blog-single">
-                        <a>The Main Thing For The Designer</a>
-                      </Link>
-                    </h5>
-                    <div className="lui-text">
-                      <p>
-                        Vivamus interdum suscipit lacus. Nunc ultrices accumsan
-                        mattis. Aliquam vel sem vel velit efficitur malesuada.
-                        Donec arcu lacus, ornare eget…{" "}
-                      </p>
-                      <div className="readmore">
-                        <Link legacyBehavior href="/blog-single">
-                          <a className="lnk">Read more</a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <div
-                  className="archive-item scrolla-element-anim-1 scroll-animate"
-                  data-animate="active"
-                >
-                  <div className="image">
-                    <Link legacyBehavior href="/blog-single">
-                      <a>
-                        <img
-                          decoding="async"
-                          src="assets/images/blog-4-scaled-1.jpg"
-                          alt="Follow Your Own Design Process"
-                        />
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="desc">
-                    <div className="category lui-subtitle">
-                      <span>October 31, 2022</span>
-                    </div>
-                    <h5 className="lui-title">
-                      <Link legacyBehavior href="/blog-single">
-                        <a>Follow Your Own Design Process</a>
-                      </Link>
-                    </h5>
-                    <div className="lui-text">
-                      <p>
-                        Vivamus interdum suscipit lacus. Nunc ultrices accumsan
-                        mattis. Aliquam vel sem vel velit efficitur malesuada.
-                        Donec arcu lacus, ornare eget…{" "}
-                      </p>
-                      <div className="readmore">
-                        <Link legacyBehavior href="/blog-single">
-                          <a className="lnk">Read more</a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <div
-                  className="archive-item scrolla-element-anim-1 scroll-animate"
-                  data-animate="active"
-                >
-                  <div className="image">
-                    <Link legacyBehavior href="/blog-single">
-                      <a>
-                        <img
-                          decoding="async"
-                          src="assets/images/blog-2.jpg"
-                          alt="Usability Secrets to Create Better Interfaces"
-                        />
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="desc">
-                    <div className="category lui-subtitle">
-                      <span>November 28, 2021</span>
-                    </div>
-                    <h5 className="lui-title">
-                      <Link legacyBehavior href="/blog-single">
-                        <a>Usability Secrets to Create Better Interfaces</a>
-                      </Link>
-                    </h5>
-                    <div className="lui-text">
-                      <p>
-                        Vivamus interdum suscipit lacus. Nunc ultrices accumsan
-                        mattis. Aliquam vel sem vel velit efficitur malesuada.
-                        Donec arcu lacus, ornare eget…{" "}
-                      </p>
-                      <div className="readmore">
-                        <Link legacyBehavior href="/blog-single">
-                          <a className="lnk">Read more</a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="load-more">
-              <Link legacyBehavior href="/blog">
-                <a
-                  className="btn scrolla-element-anim-1 scroll-animate"
-                  data-animate="active"
-                >
-                  <span>View Blog</span>
-                </a>
-              </Link>
-            </div>
-            <div className="lui-bgtitle">
-              <span> Blog </span>
-            </div>
-          </div>
-        </div>
-      </section>
       {/* Section - Contacts */}
-      <section className="lui-section lui-gradient-bottom" id="contact-section">
+      <section className="lui-section lui-gradient-center" id="contact-section">
         {/* Heading */}
         <div className="lui-heading">
           <div className="container">
@@ -1288,7 +1096,7 @@ const Index = () => {
                       <span> Address </span>
                     </div>
                     <div className="lui-text">
-                      <span> North Tower, Toronto, Canada </span>
+                      <span> Jakarta, Indonesia </span>
                     </div>
                   </div>
                   <div
@@ -1330,7 +1138,7 @@ const Index = () => {
                       <span> Phone </span>
                     </div>
                     <div className="lui-text">
-                      <span> +1 900 - 900 - 9000 </span>
+                      <span> +62 857 - 8888 - 3005 </span>
                     </div>
                   </div>
                 </div>
@@ -1353,7 +1161,7 @@ const Index = () => {
                           <div className="group">
                             <label>
                               Your Full Name <b>*</b>
-                              <input type="text" name="name" />
+                              <input type="text" name="name" disabled/>
                             </label>
                           </div>
                         </div>
@@ -1361,7 +1169,7 @@ const Index = () => {
                           <div className="group">
                             <label>
                               Your Email Address <b>*</b>
-                              <input type="email" name="email" />
+                              <input type="email" name="email" disabled/>
                             </label>
                           </div>
                         </div>
@@ -1369,7 +1177,7 @@ const Index = () => {
                           <div className="group">
                             <label>
                               Your Subject <b>*</b>
-                              <input type="text" name="subject" />
+                              <input type="text" name="subject" disabled/>
                             </label>
                           </div>
                         </div>
@@ -1377,7 +1185,7 @@ const Index = () => {
                           <div className="group">
                             <label>
                               Your Message <b>*</b>
-                              <textarea name="message" defaultValue={""} />
+                              <textarea name="message" disabled/>
                             </label>
                           </div>
                         </div>
@@ -1387,7 +1195,7 @@ const Index = () => {
                           </div>
                           <a
                             href="#"
-                            className="btn"
+                            className="btn disabled"
                             onclick="$('#cform').submit(); return false;"
                           >
                             <span>Send Message</span>
