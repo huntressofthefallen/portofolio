@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Resume from "../src/components/Resume";
 import Layout from "../src/layouts/Layout";
+import { useState } from 'react';
 import {
   servicesSliderProps,
   testimonialsSliderProps,
@@ -13,7 +14,84 @@ const PortfolioIsotope = dynamic(
     ssr: false,
   }
 );
+
 const Index = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [status, setStatus] = useState(''); // To display submission status
+
+  // --- IMPORTANT ---
+  // Replace this with your actual Discord Webhook URL
+  const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1389103918247841822/IHtHlqMWQnSMLsGlG3lV0hdUplHjOOlPHsd7BdQyqoBpmKQQAtMZVgjw7EZMWqVc2fGo';
+
+  /**
+   * Handles the form submission event.
+   * Prevents default form behavior, constructs the payload, and sends it to the Discord webhook.
+   * @param {Event} e - The form submission event.
+   */
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent the default form submission behavior
+
+    setStatus('sending'); // Set status to 'sending'
+
+    // Basic validation: ensure all fields are filled
+    if (!name || !email || !subject || !message) { // Added subject to validation
+      setStatus('error'); // Set status to 'error' for validation failure
+      return;
+    }
+
+    // Construct the payload for the Discord webhook
+    // Discord webhooks expect a JSON object, typically with a 'content' field
+    // You can customize the 'content' string to format how the message appears in Discord
+    const payload = {
+      embeds: [
+        {
+          title: "Contact Form Submission",
+          color: 0x0099ff, // Hex color code
+          description: `**Subject:** ${subject}\n\n**Message:** ${message}`,
+          fields: [
+            { name: "Name", value: name, inline: true },
+            { name: "Email", value: email, inline: true },
+          ],
+          timestamp: new Date().toISOString(),
+          footer: { text: "Form submitted via website" }
+        }
+      ]
+    };
+
+    try {
+      // Send the data to the Discord webhook using the fetch API
+      const response = await fetch(DISCORD_WEBHOOK_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload), // Convert the JavaScript object to a JSON string
+      });
+
+      // Check if the request was successful
+      if (response.ok) {
+        setStatus('success'); // Set status to 'success'
+        // Optionally, clear the form fields after successful submission
+        setName('');
+        setEmail('');
+        setSubject(''); // Clear subject field
+        setMessage('');
+      } else {
+        // If the response is not OK, log the error and set an error status
+        const errorText = await response.text();
+        console.error('Failed to send message to Discord:', response.status, errorText);
+        setStatus('error'); // Set status to 'error' for API failure
+      }
+    } catch (error) {
+      // Catch any network errors or issues with the fetch request
+      console.error('Error sending message:', error);
+      setStatus('error'); // Set status to 'error' for API failure
+    }
+  };
+
   return (
     <Layout pageClassName={"home dark-skin"}>
       {/* Section - Hero Started */}
@@ -50,7 +128,7 @@ const Index = () => {
                 <div className="description">
                   <div>
                     <p>
-                      From Jakarta, Indonesia. I bring extensive experience in marketing and technology consulting services. I'd be delighted to discuss our unique offerings with you.
+                      From Jakarta, Indonesia. I bring extensive experience in community management, marketing, and technology consulting services. I'd be delighted to discuss our unique offerings with you.
                     </p>
                   </div>
                   <div className="social-links">
@@ -105,16 +183,16 @@ const Index = () => {
                   <ul>
                     <li>
                       <span className="num">
-                        2 <strong>+</strong>
+                        4 <strong>+</strong>
                       </span>
                       <span className="value">
                         Years of <strong>Experience</strong>
                       </span>
                     </li>
                     <li>
-                      <span className="num">10 <strong>+</strong></span>
+                      <span className="num">5 <strong>+</strong></span>
                       <span className="value">
-                        Completed <strong>Projects</strong>
+                        Different <strong>Game Communities</strong>
                       </span>
                     </li>
                   </ul>
@@ -122,7 +200,7 @@ const Index = () => {
               </div>
             </div>
             <div className="lui-bgtitle">
-              <span> Web Developer </span>
+              <span> Community Manager </span>
             </div>
           </div>
         </div>
@@ -876,7 +954,7 @@ const Index = () => {
                   <div className="price">
                     <span>
                       {" "}
-                      25 <b>$</b>
+                      30 <b>$</b>
                     </span>
                     <em>Hour</em>
                   </div>
@@ -892,10 +970,6 @@ const Index = () => {
                       <ul>
                         <li>
                           <i className="fas fa-check" />
-                          Digital Marketing
-                        </li>
-                        <li>
-                          <i className="fas fa-check" />
                           Community Management
                         </li>
                         <li>
@@ -903,10 +977,13 @@ const Index = () => {
                           Customer Support
                         </li>
                         <li>
+                          <em>Digital Marketing</em>                          
+                        </li>
+                        <li>
                           <em>Web Development</em>
                         </li>
                         <li>
-                          <em>Chemical Engineering</em>
+                          <em>Discord Bot Development</em>
                         </li>
                       </ul>
                     </div>
@@ -937,10 +1014,10 @@ const Index = () => {
                   <div className="price">
                     <span>
                       {" "}
-                      900 <b>$</b>
+                      1100 <b>$</b>
                     </span>
                     <em>Week</em>
-                    <em>(~22.5 <b>$</b> Hour)</em>
+                    <em>(~27.5 <b>$</b> Hour)</em>
                   </div>
                   <div className="lui-text">
                     <div>
@@ -954,10 +1031,6 @@ const Index = () => {
                       <ul>
                         <li>
                           <i className="fas fa-check" />
-                          Digital Marketing
-                        </li>
-                        <li>
-                          <i className="fas fa-check" />
                           Community Management
                         </li>
                         <li>
@@ -966,10 +1039,13 @@ const Index = () => {
                         </li>
                         <li>
                           <i className="fas fa-check" />
-                          Web Development
+                          Digital Marketing                      
                         </li>
                         <li>
-                          <em>Chemical Engineering</em>
+                          <em>Web Development</em>
+                        </li>
+                        <li>
+                          <em>Discord Bot Development</em>
                         </li>
                       </ul>
                     </div>
@@ -997,25 +1073,21 @@ const Index = () => {
                   <div className="price">
                     <span>
                       {" "}
-                      3200 <b>$</b>
+                      4000 <b>$</b>
                     </span>
                     <em>Month</em>
-                    <em>(~20 <b>$</b> Hour)</em>
+                    <em>(~25 <b>$</b> Hour)</em>
                   </div>
                   <div className="lui-text">
                     <div>
                       <p>
-                        Enhance your business with our holistic suite of services covering digital marketing, community management, customer support, web development, and even solutions in the realm of chemical engineering. Our diverse expertise is tailored to drive your brand's success. Let's collaborate to achieve your goals.
+                        Enhance your business with our holistic suite of services covering digital marketing, community management, customer support, and web development. Our diverse expertise is tailored to drive your brand's success. Let's collaborate to achieve your goals.
                       </p>
                     </div>
                   </div>
                   <div className="list">
                     <div>
                       <ul>
-                        <li>
-                          <i className="fas fa-check" />
-                          Digital Marketing
-                        </li>
                         <li>
                           <i className="fas fa-check" />
                           Community Management
@@ -1026,11 +1098,15 @@ const Index = () => {
                         </li>
                         <li>
                           <i className="fas fa-check" />
+                          Digital Marketing
+                        </li>
+                        <li>
+                          <i className="fas fa-check" />
                           Web Development
                         </li>
                         <li>
                           <i className="fas fa-check" />
-                          Chemical Engineering
+                          Discord Bot Development
                         </li>
                       </ul>
                     </div>
@@ -1155,13 +1231,13 @@ const Index = () => {
                     }}
                   />
                   <div className="contacts-form">
-                    <form onSubmit={(e) => e.preventDefault()} id="cform">
+                    <form onSubmit={(e) => handleSubmit(e)} id="cform">
                       <div className="row">
                         <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                           <div className="group">
                             <label>
                               Your Full Name <b>*</b>
-                              <input type="text" name="name" disabled/>
+                              <input type="text" name="name" required onChange={e => setName(e.target.value)}/>
                             </label>
                           </div>
                         </div>
@@ -1169,7 +1245,7 @@ const Index = () => {
                           <div className="group">
                             <label>
                               Your Email Address <b>*</b>
-                              <input type="email" name="email" disabled/>
+                              <input type="email" name="email" required onChange={e => setEmail(e.target.value)}/>
                             </label>
                           </div>
                         </div>
@@ -1177,7 +1253,7 @@ const Index = () => {
                           <div className="group">
                             <label>
                               Your Subject <b>*</b>
-                              <input type="text" name="subject" disabled/>
+                              <input type="text" name="subject" required onChange={e => setSubject(e.target.value)} maxLength={256}/>
                             </label>
                           </div>
                         </div>
@@ -1185,7 +1261,7 @@ const Index = () => {
                           <div className="group">
                             <label>
                               Your Message <b>*</b>
-                              <textarea name="message" disabled/>
+                              <textarea name="message" required onChange={e => setMessage(e.target.value)} maxLength={2048}/>
                             </label>
                           </div>
                         </div>
@@ -1193,19 +1269,31 @@ const Index = () => {
                           <div className="terms-label">
                             * Accept the terms and conditions.
                           </div>
-                          <a
-                            href="#"
-                            className="btn disabled"
-                            onclick="$('#cform').submit(); return false;"
+                          <button
+                            type="submit"
+                            className="btn"
                           >
                             <span>Send Message</span>
-                          </a>
+                          </button>
                         </div>
                       </div>
                     </form>
-                    <div className="alert-success" style={{ display: "none" }}>
-                      <p>Thanks, your message is sent successfully.</p>
-                    </div>
+                    {/* Status Message Display */}
+                    {status === 'success' && (
+                      <div className="mt-4 p-3 rounded-md bg-green-100 border border-green-400 text-green-700 text-center text-sm font-medium">
+                        <p>Thanks, your message is sent successfully.</p>
+                      </div>
+                    )}
+                    {status === 'error' && (
+                      <div className="mt-4 p-3 rounded-md bg-red-100 border border-red-400 text-red-700 text-center text-sm font-medium">
+                        <p>Failed to send message. Please try again.</p>
+                      </div>
+                    )}
+                    {status === 'sending' && (
+                      <div className="mt-4 p-3 rounded-md bg-blue-100 border border-blue-400 text-blue-700 text-center text-sm font-medium">
+                        <p>Sending message...</p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

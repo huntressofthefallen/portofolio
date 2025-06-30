@@ -22,15 +22,15 @@ const educationData = [
 const experienceData = [
   {
     id: 1,
-    title: "Community & Support Consultant",
-    company: "thatgamecompany Inc.",
-    dec: "Community & Support Consultant at thatgamecompany, responsible for cultivating thriving online communities, providing exceptional customer support, and ensuring a seamless player experience, while fostering strong connections between players and the company.",
+    title: "Assistant Community Manager, Indonesia",
+    company: "thatgamecompany, Inc.",
+    dec: "As an Assistant Community Manager, Indonesia at thatgamecompany, responsible for cultivating thriving online communities, providing exceptional customer support, and ensuring a seamless player experience, while fostering strong connections between players and the company.",
     startYear: "2023",
     endYear: false,
   },
   {
     id: 2,
-    title: "Overseas Community Operations Consultant",
+    title: "Overseas Community Operations",
     company: "Beijing Fun Plus Technology, Co. Ltd.",
     dec: "Overseas Community Operations Consultant at FunPlus, skilled in international community management, marketing, social media, and brand support. Leveraged expertise in full-stack development, including JavaScript, HTML, and CSS, to create innovative solutions such as Discord bot development and website integration, enhancing the user experience.",
     startYear: "2021",
