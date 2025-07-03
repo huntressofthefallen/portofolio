@@ -22,10 +22,6 @@ const Index = () => {
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState(''); // To display submission status
 
-  // --- IMPORTANT ---
-  // Replace this with your actual Discord Webhook URL
-  const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1389103918247841822/IHtHlqMWQnSMLsGlG3lV0hdUplHjOOlPHsd7BdQyqoBpmKQQAtMZVgjw7EZMWqVc2fGo';
-
   /**
    * Handles the form submission event.
    * Prevents default form behavior, constructs the payload, and sends it to the Discord webhook.
@@ -42,28 +38,16 @@ const Index = () => {
       return;
     }
 
-    // Construct the payload for the Discord webhook
-    // Discord webhooks expect a JSON object, typically with a 'content' field
-    // You can customize the 'content' string to format how the message appears in Discord
-    const payload = {
-      embeds: [
-        {
-          title: "Contact Form Submission",
-          color: 0x0099ff, // Hex color code
-          description: `**Subject:** ${subject}\n\n**Message:** ${message}`,
-          fields: [
-            { name: "Name", value: name, inline: true },
-            { name: "Email", value: email, inline: true },
-          ],
-          timestamp: new Date().toISOString(),
-          footer: { text: "Form submitted via website" }
-        }
-      ]
-    };
-
     try {
+      // Construct the payload object with form data
+      const payload = {
+        name,
+        email,
+        subject,
+        message,
+      };
       // Send the data to the Discord webhook using the fetch API
-      const response = await fetch(DISCORD_WEBHOOK_URL, {
+      const response = await fetch('/api/discord', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
